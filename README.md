@@ -110,4 +110,9 @@ projeto_login/                        # Diretório raiz do projeto
 │
 ├── db.sqlite3                        # Banco de dados SQLite
 ├── manage.py                         # Script de gerenciamento do Django
+```
 
+## 📌Considerações Finais
+- Estrutura Modular: Organização clara com diretórios separados para configurações, app, templates e arquivos estáticos.
+- Validações Robústas: Formulários com validações que garantem dados íntegros e feedback imediato ao usuário.
+- Funcionalidades Avançadas: Envio de e-mail de confirmação (via console).
