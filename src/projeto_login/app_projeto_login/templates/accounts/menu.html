@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="{% static 'app_projeto_login/style.css' %}">
+</head>
+
+<body>
+    <div class="menu-container">
+        <h2>Bem-vindo(a) ao Menu</h2>
+        <p>Lista de usuários cadastrados:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <button id="sair-btn">Sair</button>
+    </div>
+
+    <script>
+        document.getElementById("sair-btn").addEventListener("click", function () {
+            window.location.href = "{% url 'login' %}";
+        });
+    </script>
+</body>
+
+</html>
