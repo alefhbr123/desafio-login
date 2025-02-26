@@ -46,12 +46,16 @@ Obs.: Se não tiver um arquivo requirements.txt, instale o Django:
 ```bash
 pip install django
 ```
-## 4. Aplique as Migrações do Banco de Dados
+## 4. Acessar a pasta com manage.py
+```bash
+cd src/projeto_login
+```
+## 5. Aplique as Migrações do Banco de Dados
 Crie o banco de dados e configure o schema:
 ```bash
 python manage.py migrate
 ```
-## 5.Execute o Servidor de Desenvolvimento
+## 6.Execute o Servidor de Desenvolvimento
 Inicie o servidor:
 ```bash
 python manage.py runserver
