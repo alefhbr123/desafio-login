@@ -10,13 +10,60 @@ Este projeto implementa uma aplicação Django com as funcionalidades de **Login
 - ``HTML``
 - ``CSS``
 - ``JavaScript``
+## 📦​Instalação
+## 1. Clonar o Repositório
 
-## Funcionalidades
-- Tela de Login:
+Abra o terminal e execute os comandos abaixo:
+
+```bash
+git clone https://github.com/seu_usuario/desafio-login.git
+cd desafio-login
+```
+Entre na pasta do projeto
+
+```bash
+cd desafio-login
+```
+## 2. Crie e Ative um Ambiente Virtual
+```bash
+python -m venv venv
+```
+Ative o ambiente:
+- No Windows:
+```bash
+venv\Scripts\activate
+```
+- No macOS/Linux:
+```bash
+  source venv/bin/activate
+```
+## 3. Instale as Dependências
+Instale o Django e outras bibliotecas necessárias:
+```bash
+pip install -r requirements.txt
+```
+Obs.: Se não tiver um arquivo requirements.txt, instale o Django:
+```bash
+pip install django
+```
+## 4. Aplique as Migrações do Banco de Dados
+Crie o banco de dados e configure o schema:
+```bash
+python manage.py migrate
+```
+## 5.Execute o Servidor de Desenvolvimento
+Inicie o servidor:
+```bash
+python manage.py runserver
+```
+Acesse a aplicação pelo navegador em: http://127.0.0.1:8000/
+
+## 🔗Funcionalidades
+- ✅Tela de Login:
   - Validação de e-mail e senha.
   - Tratamento de erros específicos ("E-mail inexistente" e "Senha inválida").
   - Redirecionamento para a tela de Menu após login.
-- Tela de Registrar:
+- ✅Tela de Registrar:
   - Formulário com campos: nome, e-mail, senha e confirmar senha.
   - Validações:
     - Nome aceita apenas letras.
@@ -25,38 +72,42 @@ Este projeto implementa uma aplicação Django com as funcionalidades de **Login
     - Confirmação de senha idêntica.
   - Botão para alternar a visualização dos campos de senha.
   - Botões "Registrar" e "Cancelar" (este último redireciona para a tela de Login).
-- Extra:
-  - Envio de e-mail de confirmação (necessário configurar o backend de e-mail).
+- ✅Extra:
+  - Envio de e-mail de confirmação (Obs: A confirmação aparecerá no terminal).
 
   ## 📌Estrutura do Repositório
   
 ```text
-desafio-login/                     # Diretório raiz do projeto
-├── README.md                     # Documentação e instruções do projeto
-├── .gitignore                    # Arquivo para ignorar arquivos/pastas no Git
-├── manage.py                     # Script de gerenciamento do Django
-├── projeto_login/                # Diretório do projeto (configurações gerais)
-│   ├── __init__.py
-│   ├── settings.py               # Configurações do projeto (inclui STATIC_URL, EMAIL_BACKEND etc.)
-│   ├── urls.py                   # URLs globais do projeto
-│   ├── wsgi.py                   # Configuração do servidor WSGI
-│   └── asgi.py                   # (Opcional) Configuração do servidor ASGI
-└── app_projeto_login/            # Seu app principal
-    ├── __init__.py
-    ├── admin.py                  # Registro de modelos no admin
-    ├── apps.py                   # Configuração do app
-    ├── forms.py                  # Formulários (LoginForm, RegisterForm, etc.)
-    ├── models.py                 # Modelos (se houver, ou pode ficar vazio)
-    ├── tests.py                  # Testes do app
-    ├── urls.py                   # URLs específicas do app
-    ├── views.py                  # Views (login_view, register_view, menu_view, etc.)
-    ├── migrations/               # Diretório das migrações do banco de dados
-    │   └── __init__.py
-    ├── templates/                # Templates do app
-    │   └── accounts/             # Templates relacionados às contas de usuário
-    │       ├── login.html        # Template da tela de login
-    │       ├── register.html     # Template da tela de registro
-    │       └── menu.html         # Template da tela de menu
-    └── static/                   # Arquivos estáticos do app
-        └── app_projeto_login/    # Organiza os arquivos estáticos por app
-            └── style.css         # Arquivo CSS para o projeto
+projeto_login/                        # Diretório raiz do projeto
+│
+├── app_projeto_login/                # Aplicação principal do Django
+│   ├── __pycache__/  
+│   ├── migrations/                   # Diretório para arquivos de migração do banco de dados
+│   │   ├── __pycache__/  
+│   │   ├── __init__.py  
+│   ├── static/app_projeto_login/     # Diretório para arquivos estáticos
+│   │   ├── style.css  
+│   ├── templates/accounts/           # Diretório para templates HTML
+│   │   ├── login.html  
+│   │   ├── menu.html  
+│   │   ├── register.html  
+│   ├── __init__.py  
+│   ├── admin.py                      # Arquivo gerado pelo Django (vazio por padrão)
+│   ├── apps.py                       # Configuração da aplicação
+│   ├── forms.py                      # Formulários Django
+│   ├── models.py                     # Arquivo gerado pelo Django (vazio por padrão)
+│   ├── tests.py                      # Arquivo gerado pelo Django (vazio por padrão)
+│   ├── urls.py                       # Rotas da aplicação
+│   ├── views.py                      # Views da aplicação
+│
+├── projeto_login/                    # Diretório de configuração do projeto Django
+│   ├── __pycache__/  
+│   ├── __init__.py  
+│   ├── asgi.py                       # Configuração ASGI
+│   ├── settings.py                   # Configurações gerais do projeto
+│   ├── urls.py                       # Rotas do projeto
+│   ├── wsgi.py                       # Configuração WSGI
+│
+├── db.sqlite3                        # Banco de dados SQLite
+├── manage.py                         # Script de gerenciamento do Django
+
