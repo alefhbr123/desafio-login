@@ -30,6 +30,7 @@ Este projeto implementa uma aplicação Django com as funcionalidades de **Login
 
   ## 📌Estrutura do Repositório
   
+```text
 desafio-login/                     # Diretório raiz do projeto
 ├── README.md                     # Documentação e instruções do projeto
 ├── .gitignore                    # Arquivo para ignorar arquivos/pastas no Git
@@ -59,4 +60,3 @@ desafio-login/                     # Diretório raiz do projeto
     └── static/                   # Arquivos estáticos do app
         └── app_projeto_login/    # Organiza os arquivos estáticos por app
             └── style.css         # Arquivo CSS para o projeto
-
