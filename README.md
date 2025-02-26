@@ -16,7 +16,7 @@ Este projeto implementa uma aplicação Django com as funcionalidades de **Login
 Abra o terminal e execute os comandos abaixo:
 
 ```bash
-git clone https://github.com/seu_usuario/desafio-login.git
+git clone https://github.com/alefhbr123/desafio-login.git
 cd desafio-login
 ```
 Entre na pasta do projeto
