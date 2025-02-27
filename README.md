@@ -32,12 +32,12 @@ venv\Scripts\activate
 ```bash
   source venv/bin/activate
 ```
-## 3. Instale as Dependências
+## 3. (Agora dentro do ambiente virtual) Instale as Dependências
 instale o Django:
 ```bash
 pip install django
 ```
-## 4. Acessar a pasta com manage.py
+## 4. (Ainda dentro do ambiente virtual)Acessar a pasta com manage.py
 ```bash
 cd src/projeto_login
 ```
