@@ -19,11 +19,6 @@ Abra o terminal e execute os comandos abaixo:
 git clone https://github.com/alefhbr123/desafio-login.git
 cd desafio-login
 ```
-Entre na pasta do projeto
-
-```bash
-cd desafio-login
-```
 ## 2. Crie e Ative um Ambiente Virtual
 ```bash
 python -m venv venv
